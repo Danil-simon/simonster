@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>SIMON PRODUCTION</title>
+    <link type="image/x-icon" href="logo.ico" rel="shortcut icon">
+    <link rel="stylesheet" href="style.css"> 
+    <script type="text/javascript" src="app.js" defer=""></script>
+
+</head>
+<body>
+
+  <header>
+
+    <div class="logo">
+        <img src="logo.jpg">
+    </div>
+
+    <h1 class="site-title">SIMON PRODUCTION</h1>
+
+    <nav>
+        <ul>
+            <li><a href="hhttps://catherineasquithgallery.com/korichnevye-fony/14671-tort-na-korichnevom-fone-65-foto.html">Торты</a></li>
+            <li><a href="https://catherineasquithgallery.com/zelenye-fony/15231-fon-temno-zelenogo-chaja-91-foto.html">Чай</a></li>
+            <li><a href="https://lk.sut.ru/cabinet/?login=yes">My life</a></li>
+        </ul>
+    </nav>
+
+  </header>
+    
+
+
+    <div class="slider-container">
+        <div class="slider">
+          <img src="1.jpg"  height="100px" onclick="openFullscreenImage(this)">
+          <img src="2.jpg"  height="100px" onclick="openFullscreenImage(this)">
+          <img src="3.jpg"  height="100px" onclick="openFullscreenImage(this)">
+          <img src="4.jpg"  height="100px" onclick="openFullscreenImage(this)">
+        </div>
+        <button class="prev-button" aria-label="Посмотреть предыдущий слайд">&lt;</button>
+        <button class="next-button" aria-label="Посмотреть следующий слайд">&gt</button>  
+    </div>
+
+    <section id="section1">
+
+      <div class="text_o_nas">
+        <h1>О кондитере:</h1>
+            <p>Персональный кондитер ИКСС
+            </p>
+            <p>Работаю меньше 1 семестра
+            </p>
+            <p>Настоящие мастера не раскрывают процесс приготовлений.
+            </p>
+      </div>
+
+    </section>
+
+
+    <section id="section2">
+      
+      <div class="column">
+
+        <h2>Торт «Молочная двоечка»</h2>
+        <img src="5.jpg" class="pic" onclick="openFullscreenImage(this)">
+        <p>Продукты (на 6 порций)
+          Для коржей:
+          Сгущенное молоко - 300 г
+          Яйцо - 3 шт. (общий вес со скорлупой - 195 г)
+          Соль - 1 щепотка
+          Мука пшеничная - 180 г
+          Разрыхлитель - 10 г
+          Масло сливочное - для смазывания пергамента или силиконового коврика
+          *
+          Для крема:
+          Сливки 33% - 500 г
+          Сгущенное молоко - 80 г
+          Ванильный сахар - 10 г
+          *
+          Для украшения:
+          Ягоды свежие - по вкусу
+        </p>
+        <p>
+            
+        </p>
+    </div>
+    <div class="column">
+        <h2>Мой рецепт "Автомата"</h2>
+        <img src="6.jpg" class="pic" onclick="openFullscreenImage(this)">
+        <p>Продукты (на 16 порций)
+          Для генуэзского бисквита:
+          6 яиц
+          165 г сахарной пудры
+          75 г сливочного масла
+          225 г муки
+          Для крема:
+          4 яйца
+          200 г сахара
+          500 г творога 9%
+          500 мл сливок для взбивания
+          Для сиропа:
+          3 ст. л. кофе (растворимого или сваренного)
+          110 г сахара
+          250 мл воды
+          коньяк
+            </p>
+            <p>
+            </p>
+        </div>
+
+        <div class="column">
+            <h2>Маффины "ДОПСА"</h2>
+            <img src="7.jpg" class="pic" onclick="openFullscreenImage(this)">
+            <p>Продукты (на 12 порций)
+                Масло сливочное - 180 г
+                Шоколад - 100 г
+                Сахар - 200 г
+                Яйцо - 4 шт.
+                Мука - 100 г
+                Какао - 40 г
+                Разрыхлитель - 1 ч.л.
+                </p>
+            <p>
+                
+                </p>
+        </div>
+
+      </div>
+
+
+    <div id="fullscreen-container" class="hidden">
+      <span class="close-button" onclick="closeFullscreenImage()">&times;</span>
+      <img src="" alt="Полноэкранное изображение" id="fullscreen-image">
+    </div>
+
+    </section>
+    <video src="1.mp4" controls style="height: 600px; width: 100%;"></video>
+
+    <button id="scrollToTopButton">Вверх</button>
+    <div class="str"></div>
+<input class="input-num" type="text">
+<button class="btn">Отправить</button>
+</div>
+
+
+</body>
+
+<footer style="width: 100%;">
+
+  <div class="social-icons">
+    <a href="https://t.me/+r8QsYL4RN1liZjBi" class="social-icon"><img src="tg.webp" alt="Tg"></a>
+    <a href="https://vk.com/handshake_bonch" class="social-icon"><img src="vk.png" alt="Vk"></a>
+  </div>
+  <script type="text/javascript">
+let str = document.querySelector(".str"); // Берём элемент строки
+let btn = document.querySelector(".btn"); // Берём элемент кнопки
+
+let num1 = Math.ceil(Math.random() * 10); // Получаем рандомное число один
+let num2 = Math.ceil(Math.random() * 10); // Получаем рандомное число два
+let res = num1 + num2; // Результат сложение этих чисел
+
+// Выводим строчку ворожения
+str.innerHTML = `${num1} + ${num2} = `;
+
+// События нажатия на кнопку
+btn.addEventListener("click", function () {
+// Получаем значение из input
+let inputNum = document.querySelector(".input-num").value;
+// Переводим в числовой тип данных
+inputNum = parseInt(inputNum);
+// Условие, если значение из input равно результат
+if (inputNum === res) {
+// То выводит в консоль "Вход разрешён"
+alert("Вход разрешён");
+} else {
+// Иначе выводит "Вход запрещен"
+alert("Вход запрещен");
+}
+
+});
+</script>
+  
+</footer>
+
+
+</html>
